@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <p>This is where the cart will display the items you've selected.</p>
+    <!-- Additional cart details could be added here -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <p>Here are the items you've added to your cart:</p>
+
+    <!-- Cart display section -->
+    <ul id="cart"></ul>
+
+    <!-- Link to go back to the store -->
+    <p>
+        <a href="2%20page.html">Back to Store</a>
+    </p>
+
+    <script>
+        // Retrieve the cart data from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Display the cart items
+        const cart = document.getElementById('cart');
+        cartItems.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `Item ID: ${item.id}, Name: ${item.name}`;
+            cart.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
